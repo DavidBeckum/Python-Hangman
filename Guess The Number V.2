@@ -1,0 +1,35 @@
+#Guess the number
+import random
+i = 0
+limit_guess = 10
+number = random.randint(1, 100)
+my_guess = ""
+win = False
+
+name = input("What is your name: ")
+answer = input("Hello " + name + "! Wanna play Guess the Number ('y' or 'n'): ")
+if answer == "y":
+    print("\n")
+elif answer == "n":
+    breakpoint(print("Alrighty"))
+else:
+    breakpoint(print("Please try again"))
+
+while i < limit_guess:
+    my_guess = int(input("Guess a number (1 - 100): "))
+    i += 1
+    print("You guessed " + str(i) + "/10 time(s)")
+    if my_guess > number:
+        print("Guess Lower")
+    elif my_guess < number:
+        print("Guess Higher")
+    else:
+        win = True
+        break
+
+if not win:
+    print("You Lose!")
+else:
+    print("You Win! Took you " + str(i) + "/10 tries!")
+
+

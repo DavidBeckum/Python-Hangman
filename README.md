@@ -1,2 +1,0 @@
-# Python-Hangman
-Hang man
